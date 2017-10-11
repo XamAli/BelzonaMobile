@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{31738905-41C8-4FED-B44E-50E534875EC5}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BelzonaMobile/Models/MasterMenuItem.cs">
+    <Files>
+      <File FileName="BelzonaMobile/Views/Stacklayout.cs" Line="41" Column="1" />
+      <File FileName="BelzonaMobile/App.cs" Line="33" Column="17" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="BelzonaMobile/Views/MenuPage.xaml" Line="22" Column="1" />
+      <File FileName="BelzonaMobile/Views/MenuPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="BelzonaMobile/obj/Debug/BelzonaMobile.Views.MenuPage.xaml.g.cs" Line="22" Column="1" />
+      <File FileName="BelzonaMobile/Views/MainPageCS.cs" Line="18" Column="1" />
+      <File FileName="BelzonaMobile/Views/MasterPageCS.cs" Line="88" Column="1" />
+      <File FileName="BelzonaMobile/Models/MasterMenuItem.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/PageOneCS.cs" relfile="BelzonaMobile/PageOneCS.cs" line="40" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BelzonaMobile.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.2166D36B-CD0D-4BFE-A022-1E5D208508E4" />
+</Properties>

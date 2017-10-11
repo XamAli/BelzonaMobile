@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+        xmlns="http://xamarin.com/schemas/2014/forms" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+        x:Class="BelzonaMobile.Views.DetailsPage"
+        xmlns:design="clr-namespace:BelzonaMobile;assembly=BelzonaMobile"
+        xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+        BindingContext="{x:Static design:ViewModelLocator.DetailsViewModel}"
+        Title="{Binding Product.Name}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <controls:CircleImage 
+                        BorderColor="Gray"
+                        BorderThickness="3"
+                        HeightRequest="200"
+                        WidthRequest="200"
+                        HorizontalOptions="CenterAndExpand"
+                        Aspect="AspectFill"
+                        Source="{Binding Product.Image}"/>
+                <Label Text="{Binding Product.Name}" Font="Bold, 24" TextColor="#0066cc"/>
+                <Label Text="{Binding Product.Location}" FontSize="16" />
+                <BoxView 
+                        HeightRequest="2" 
+                        BackgroundColor="#0066cc" 
+                        HorizontalOptions="FillAndExpand" />
+                <Label Text="{Binding Product.Details}" FontSize="12"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
