@@ -121,6 +121,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Localize.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BelzonaMobile\BelzonaMobile.csproj">
@@ -145,6 +146,7 @@
     <BundleResource Include="Resources\todo.png" />
     <BundleResource Include="Resources\todo%402x.png" />
     <BundleResource Include="Resources\Videos.png" />
+    <BundleResource Include="Resources\en.lproj\flag.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.targets')" />

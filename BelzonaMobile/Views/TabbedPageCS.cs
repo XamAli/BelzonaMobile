@@ -16,12 +16,12 @@ namespace BelzonaMobile.Views
 			//navigationPage.Title = "Page One";
 
 			//Children.Add(navigationPage);
-            Children.Add(new ProductsPage(){Icon="Favorites.png", Title="Page One"});
-            Children.Add(new ProductsPage() { Icon = "Series.png", Title = "Page Two" });
+            Children.Add(new ProductsPage(){Icon="Favorites.png", Title="Favorites"});
+            Children.Add(new ProductsPage() { Icon = "Series.png", Title = "By Series" });
 
-            Children.Add(new ProductsPage() { Icon = "Industry.png", Title = "Page Three" });
-            Children.Add(new ProductsPage(){ Icon = "Application.png", Title = "Page Four" });
-            Children.Add(new ProductsPage() { Icon = "Videos.png", Title = "Page Five" });
+            Children.Add(new LocalHtml() { Icon = "Industry.png", Title = "By Industry" });
+            Children.Add(new FirstPage(){ Icon = "Application.png", Title = "Application" });
+            Children.Add(new MasterPageCS() { Icon = "todo.png", Title = "More ..." });
 
             //this.CurrentPageChanged += (object sender, EventArgs e) => {
             //    var i = this.Children.IndexOf(this.CurrentPage);

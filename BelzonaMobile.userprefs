@@ -1,15 +1,7 @@
 ﻿<Properties StartupConfiguration="{31738905-41C8-4FED-B44E-50E534875EC5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BelzonaMobile/Models/MasterMenuItem.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/MainActivity.cs">
     <Files>
-      <File FileName="BelzonaMobile/Views/Stacklayout.cs" Line="41" Column="1" />
-      <File FileName="BelzonaMobile/App.cs" Line="33" Column="17" />
-      <File FileName="iOS/Main.cs" Line="17" Column="1" />
-      <File FileName="BelzonaMobile/Views/MenuPage.xaml" Line="22" Column="1" />
-      <File FileName="BelzonaMobile/Views/MenuPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="BelzonaMobile/obj/Debug/BelzonaMobile.Views.MenuPage.xaml.g.cs" Line="22" Column="1" />
-      <File FileName="BelzonaMobile/Views/MainPageCS.cs" Line="18" Column="1" />
-      <File FileName="BelzonaMobile/Views/MasterPageCS.cs" Line="88" Column="1" />
-      <File FileName="BelzonaMobile/Models/MasterMenuItem.cs" Line="1" Column="1" />
+      <File FileName="Droid/MainActivity.cs" Line="27" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

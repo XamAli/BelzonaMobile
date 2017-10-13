@@ -13,7 +13,8 @@
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/Xamarin.Forms.Xaml.xml
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/ImageCircle.Forms.Plugin.Abstractions.pdb
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/ImageCircle.Forms.Plugin.Abstractions.xml
-/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.csprojResolveAssemblyReference.cache
+/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.Resx.AppResources.resources
+/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.csproj.GenerateResource.Cache
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.csproj.CoreCompileInputs.cache
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.MyListViewPage.xaml.g.cs
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.Views.DetailsPage.xaml.g.cs
@@ -23,3 +24,4 @@
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.Views.MenuPage.xaml.g.cs
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.pdb
+/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.csprojResolveAssemblyReference.cache
