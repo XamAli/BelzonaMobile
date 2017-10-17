@@ -1,14 +1,16 @@
 ﻿<Properties StartupConfiguration="{31738905-41C8-4FED-B44E-50E534875EC5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BelzonaMobile/App.cs">
     <Files>
-      <File FileName="Droid/MainActivity.cs" Line="27" Column="1" />
+      <File FileName="BelzonaMobile/Views/ItemsPage.xaml.cs" Line="47" Column="10" />
+      <File FileName="BelzonaMobile/ViewModeles/ItemsViewModel.cs" Line="37" Column="1" />
+      <File FileName="BelzonaMobile/Views/TabbedPageCS.cs" Line="45" Column="3" />
+      <File FileName="BelzonaMobile/Services/MockDataStore.cs" Line="38" Column="29" />
+      <File FileName="BelzonaMobile/App.cs" Line="74" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/PageOneCS.cs" relfile="BelzonaMobile/PageOneCS.cs" line="40" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />

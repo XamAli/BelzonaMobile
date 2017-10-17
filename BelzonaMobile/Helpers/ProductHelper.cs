@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using BelzonaMobile.Models;
 using System.Linq;
 
-namespace BelzonaMobile.Helpers
+namespace BelzonaMobile
 {
     public static class ProductHelper
     {

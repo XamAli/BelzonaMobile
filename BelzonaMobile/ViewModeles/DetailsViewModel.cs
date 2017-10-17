@@ -1,7 +1,4 @@
-﻿using System;
-using BelzonaMobile.Models;
-
-namespace BelzonaMobile.ViewModels
+﻿namespace BelzonaMobile.ViewModeles
 {
     public class DetailsViewModel
     {

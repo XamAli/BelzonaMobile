@@ -1,9 +1,8 @@
-﻿using System;
-using BelzonaMobile.Helpers;
-using BelzonaMobile.ViewModels;
-using BelzonaMobile.Views;
+﻿using BelzonaMobile.Views;
 using Xamarin.Forms;
 using System.Reflection;
+using BelzonaMobile.ViewModeles;
+
 
 namespace BelzonaMobile
 {
@@ -21,6 +20,9 @@ namespace BelzonaMobile
 
     public class App : Application
     {
+        public static ProductManager ProductManager { get; private set; }
+        //static BelProductDatabase database;
+
         public App()
         {
 
@@ -33,25 +35,48 @@ namespace BelzonaMobile
 
             // This lookup NOT required for Windows platforms - the Culture will be automatically set
             //if ( Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.Android )
-            if (Device.RuntimePlatform == Device.iOS )
-            {
-                // determine the correct, supported .NET culture
-                var ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
-                BelzonaMobile.Resx.AppResources.Culture = ci; // set the RESX for resource localization
-                DependencyService.Get<ILocalize>().SetLocale(ci); // set the Thread for locale-aware methods
-            }
+
+            var ci = DependencyService.Get<ILocale>().GetCurrentCultureInfo();
+            L10n.SetLocale(ci);
+            Resx.AppResources.Culture = ci;
+
+            //if (Device.RuntimePlatform == Device.iOS )
+            //{
+            //    // determine the correct, supported .NET culture
+            //    var ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+            //    BelzonaMobile.Resx.AppResources.Culture = ci; // set the RESX for resource localization
+            //    DependencyService.Get<ILocalize>().SetLocale(ci); // set the Thread for locale-aware methods
+            //}
 
             //MainPage =  new MenuPage();
-            MainPage = new MainPageCS();
+            //ProductManager = new ProductManager(new RestService());
+            //MainPage = new MainPageCS();
            
-            //MainPage = new NavigationPage(new MainPageCS())
-            //{
-            //    BarTextColor = Color.White,
-            //    BarBackgroundColor = Color.FromHex("#B2BABB")
-            //};
+            if (Constants.UseMockDataStore)
+                DependencyService.Register<MockDataStore>();
+            else
+                DependencyService.Register<CloudDataStore>();
+
+            if (Device.RuntimePlatform == Device.iOS)
+                //MainPage = new TabbedPageCS();
+                MainPage = new NavigationPage(new TabbedPageCS());
+                 //MainPage = new ItemsPage();
+            else
+                MainPage = new NavigationPage(new TabbedPageCS());
+            
         }
 
-
+        //public static BelProductDatabase Database
+        //{
+        //    get
+        //    {
+        //        if (database == null)
+        //        {
+        //            database = new BelProductDatabase();
+        //        }
+        //        return database;
+        //    }
+        //}
 
         protected override void OnStart()
         {

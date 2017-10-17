@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using BelzonaMobile.ViewModels;
+using BelzonaMobile.ViewModeles;
 using Xamarin.Forms;
-using BelzonaMobile.Models;
 
 namespace BelzonaMobile.Views
 {
@@ -23,7 +21,7 @@ namespace BelzonaMobile.Views
             if (item == null)
                 return;
 
-            //DisplayAlert("Item Tabbed", e.ToString(), "Ok");
+            DisplayAlert("Item Tabbed", e.ToString(), "Ok");
 
         }
 
@@ -34,7 +32,7 @@ namespace BelzonaMobile.Views
             //if (item == null)
             //return;
 
-            //DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
+            DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
             if (item != null)
             {
                 var newPage = new DetailsPage(item);
@@ -42,7 +40,26 @@ namespace BelzonaMobile.Views
             }
             else { return; }
         }
+        protected override void OnAppearing()
+        {
 
+            //DisplayAlert("Item Appearing", "test", "Ok");
+            //base.OnAppearing();
+
+            //if (viewModel.Items.Count == 0)
+                //viewModel.LoadItemsCommand.Execute(null);
+        }
+        async void onImageStarTapped(object sender, EventArgs args)
+        {
+            var image = sender as Image;
+             var answer = await DisplayAlert("My Favorite:", "Would you like to add your favorite list?", "Yes", "No");
+            //Debug.WriteLine("Answer: " + answer);
+             if(answer)
+            {
+                image.Opacity = 1;
+                //save to favo
+            }            
+        } 
     }
 }
 

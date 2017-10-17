@@ -1,9 +1,6 @@
-﻿using BelzonaMobile.Helpers;
-using BelzonaMobile.Models;
-using System.Collections.ObjectModel;
-using System.Linq;
+﻿using System.Collections.ObjectModel;
 
-namespace BelzonaMobile.ViewModels
+namespace BelzonaMobile.ViewModeles
 {
     public class ProductsViewModel
     {

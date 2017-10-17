@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BelzonaMobile.Models
+namespace BelzonaMobile
 {
 	public class MasterMenuItem
 	{

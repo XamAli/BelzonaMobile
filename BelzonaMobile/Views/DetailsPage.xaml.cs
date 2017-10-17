@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using BelzonaMobile.Models;
-using BelzonaMobile.ViewModels;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
+using BelzonaMobile.ViewModeles;
 
 namespace BelzonaMobile.Views
 {

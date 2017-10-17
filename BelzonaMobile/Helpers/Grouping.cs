@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BelzonaMobile.Helpers
+namespace BelzonaMobile
 {
     public class Grouping<K, T> : ObservableCollection<T>
     {

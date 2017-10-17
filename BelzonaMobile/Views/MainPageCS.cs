@@ -1,10 +1,15 @@
 ﻿using System;
 using Xamarin.Forms;
-using BelzonaMobile.Models;
 
+/*
+ * Master detail page .... implement Hamburger menu
+ * Master apage: Menu Items (MasterPageCS)
+ * Detail Page: Tabbed Page (TabbedPageCS)
+ * not in use
+ */
 namespace BelzonaMobile.Views
 {
-	public class MainPageCS : MasterDetailPage
+    public class MainPageCS : MasterDetailPage
 	{
 		MasterPageCS masterPage;
 

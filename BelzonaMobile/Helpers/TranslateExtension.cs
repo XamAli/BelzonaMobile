@@ -5,7 +5,7 @@ using System.Resources;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace BelzonaMobile.Helpers
+namespace BelzonaMobile
 {
     // You exclude the 'Extension' suffix when using in Xaml markup
     [ContentProperty ("Text")]
@@ -17,7 +17,7 @@ namespace BelzonaMobile.Helpers
 		public TranslateExtension() {
             if (Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.Android)
             {
-                ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+                ci = DependencyService.Get<ILocale>().GetCurrentCultureInfo();
             }
 		}
 

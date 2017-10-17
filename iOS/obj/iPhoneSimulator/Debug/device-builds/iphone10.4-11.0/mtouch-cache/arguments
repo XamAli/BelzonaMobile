@@ -27,11 +27,29 @@
 	-r \
 	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/Xam.Plugins.Forms.ImageCircle.1.8.1/lib/Xamarin.iOS10/ImageCircle.Forms.Plugin.iOS.dll \
 	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Microsoft.CSharp.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
+	-r \
+	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/Newtonsoft.Json.10.0.3/lib/netstandard1.3/Newtonsoft.Json.dll \
+	-r \
+	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/sqlite-net-pcl.1.4.118/lib/netstandard1.1/SQLite-net.dll \
+	-r \
+	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/SQLitePCLRaw.bundle_green.1.1.8/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll \
+	-r \
+	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/SQLitePCLRaw.bundle_green.1.1.8/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll \
+	-r \
+	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/SQLitePCLRaw.core.1.1.8/lib/Xamarin.iOS10/SQLitePCLRaw.core.dll \
+	-r \
+	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.8/lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.IO.Compression.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Net.Http.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
 	-r \
@@ -325,6 +343,18 @@
 	-r \
 	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/Xam.Plugins.Forms.ImageCircle.1.8.1/lib/Xamarin.iOS10/ImageCircle.Forms.Plugin.iOS.dll \
 	-r \
+	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/Newtonsoft.Json.10.0.3/lib/netstandard1.3/Newtonsoft.Json.dll \
+	-r \
+	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/sqlite-net-pcl.1.4.118/lib/netstandard1.1/SQLite-net.dll \
+	-r \
+	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/SQLitePCLRaw.bundle_green.1.1.8/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll \
+	-r \
+	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/SQLitePCLRaw.bundle_green.1.1.8/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll \
+	-r \
+	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/SQLitePCLRaw.core.1.1.8/lib/Xamarin.iOS10/SQLitePCLRaw.core.dll \
+	-r \
+	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.8/lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll \
+	-r \
 	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/Xamarin.Forms.2.4.0.282/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
 	-r \
 	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/Xamarin.Forms.2.4.0.282/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll \
@@ -332,6 +362,14 @@
 	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/Xamarin.Forms.2.4.0.282/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
 	-r \
 	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/Xamarin.Forms.2.4.0.282/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
+	-r \
+	/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/Plugin.Connectivity.dll \
+	-r \
+	/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/Plugin.Connectivity.Abstractions.dll \
+	-r \
+	/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/es/BelzonaMobile.resources.dll \
+	-r \
+	/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/pt/BelzonaMobile.resources.dll \
 	-r \
 	/Users/akarim/Desktop/Dev/BelzonaMobile/packages/Xamarin.Forms.2.4.0.282/lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
