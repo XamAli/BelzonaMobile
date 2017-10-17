@@ -1,11 +1,13 @@
 ﻿<Properties StartupConfiguration="{31738905-41C8-4FED-B44E-50E534875EC5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BelzonaMobile/App.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/SQLite_iOS.cs">
     <Files>
       <File FileName="BelzonaMobile/Views/ItemsPage.xaml.cs" Line="47" Column="10" />
       <File FileName="BelzonaMobile/ViewModeles/ItemsViewModel.cs" Line="37" Column="1" />
       <File FileName="BelzonaMobile/Views/TabbedPageCS.cs" Line="45" Column="3" />
-      <File FileName="BelzonaMobile/Services/MockDataStore.cs" Line="38" Column="29" />
+      <File FileName="BelzonaMobile/Services/MockDataStore.cs" Line="44" Column="37" />
       <File FileName="BelzonaMobile/App.cs" Line="74" Column="20" />
+      <File FileName="BelzonaMobile/ISQLite.cs" Line="13" Column="1" />
+      <File FileName="iOS/SQLite_iOS.cs" Line="35" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
