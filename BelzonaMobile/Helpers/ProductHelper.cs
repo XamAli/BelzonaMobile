@@ -9,7 +9,7 @@ namespace BelzonaMobile
 
         private static Random random;
 
-        public static Product GetRandomMonkey()
+        public static Product GetRandomM()
         {
             //var output = Newtonsoft.Json.JsonConvert.SerializeObject(Products);
             return Products[random.Next(0, Products.Count)];

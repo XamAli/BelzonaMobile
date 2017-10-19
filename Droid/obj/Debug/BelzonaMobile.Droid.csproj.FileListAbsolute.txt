@@ -34,3 +34,4 @@
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile.Droid/obj/Debug/res/mipmap-xxxhdpi/icon.png
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile.Droid/obj/Debug/R.cs.flag
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile.Droid/obj/Debug/uploadflags.txt
+/Users/akarim/Desktop/Dev/BelzonaMobile/Droid/obj/Debug/BelzonaMobile.Droid.csprojResolveAssemblyReference.cache

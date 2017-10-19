@@ -19,19 +19,19 @@ namespace BelzonaMobile.ViewModeles
 {
     public class ItemsViewModel : BaseViewModel
     {
-        public ObservableCollection<BelProduct> Items { get; set; }
+        public ObservableCollection<BelProduct> BelProductItems { get; set; }
         public Command LoadItemsCommand { get; set; }
 
         public ItemsViewModel()
         {
-            Title = "Browse";
-            Items = new ObservableCollection<BelProduct>();
+            //Title = "Product List";
+            BelProductItems = new ObservableCollection<BelProduct>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
             MessagingCenter.Subscribe<NewItemPage, BelProduct>(this, "AddItem", async (obj, item) =>
             {
                 var _item = item as BelProduct;
-                Items.Add(_item);
+                BelProductItems.Add(_item);
                 await DataStore.AddItemAsync(_item);
             });
         }
@@ -42,14 +42,13 @@ namespace BelzonaMobile.ViewModeles
                 return;
 
             IsBusy = true;
-
             try
             {
-                Items.Clear();
+                BelProductItems.Clear();
                 var items = await DataStore.GetItemsAsync(true);
                 foreach (var item in items)
                 {
-                    Items.Add(item);
+                    BelProductItems.Add(item);
                 }
             }
             catch (Exception ex)

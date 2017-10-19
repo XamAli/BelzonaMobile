@@ -47,7 +47,7 @@ namespace BelzonaMobile
                 }
                 catch (Exception ex)
                 {
-                    System.Diagnostics.Debug.WriteLine(@"              ERROR {0}", ex.Message);
+                    System.Diagnostics.Debug.WriteLine(@"ERROR {0}", ex.Message);
                 }
             }
 
@@ -80,14 +80,14 @@ namespace BelzonaMobile
         public async Task<bool> UpdateItemAsync(BelProduct item)
         {
             //if (item == null || item.Id == null || !CrossConnectivity.Current.IsConnected)
-            if (item == null || item.short_description == null || !CrossConnectivity.Current.IsConnected)
+            if (item == null || item.ShortDesc == null || !CrossConnectivity.Current.IsConnected)
                 return false;
 
             var serializedItem = JsonConvert.SerializeObject(item);
             var buffer = Encoding.UTF8.GetBytes(serializedItem);
             var byteContent = new ByteArrayContent(buffer);
 
-            var response = await client.PutAsync(new Uri($"api/item/{item.short_description}"), byteContent);
+            var response = await client.PutAsync(new Uri($"api/item/{item.ShortDesc}"), byteContent);
 
             return response.IsSuccessStatusCode;
         }

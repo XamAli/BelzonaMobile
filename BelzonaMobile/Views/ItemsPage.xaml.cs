@@ -40,7 +40,7 @@ namespace BelzonaMobile.Views
             //DisplayAlert("On Appearing", "Page to add .........", "Ok");
             base.OnAppearing();
 
-            if (viewModel.Items.Count == 0)
+            if (viewModel.BelProductItems.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
 
             //ItemsListView.ItemsSource = App.Database.GetItems();

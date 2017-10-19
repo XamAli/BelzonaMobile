@@ -17,10 +17,13 @@
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/es/BelzonaMobile.resources.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/pt/BelzonaMobile.resources.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/ImageCircle.Forms.Plugin.Abstractions.dll
+/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/MvvmHelpers.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/Newtonsoft.Json.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/Plugin.Connectivity.Abstractions.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/Plugin.Connectivity.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/SQLite-net.dll
+/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/SQLite.Net.Async.dll
+/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/SQLite.Net.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/SQLitePCLRaw.batteries_green.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/SQLitePCLRaw.batteries_v2.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/SQLitePCLRaw.core.dll
@@ -43,8 +46,9 @@
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/Plugin.Connectivity.xml
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/SQLite-net.pdb
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/SQLite-net.xml
+/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/MvvmHelpers.pdb
+/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/MvvmHelpers.xml
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/es/BelzonaMobile.resources.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/pt/BelzonaMobile.resources.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.pdb
-/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.csprojResolveAssemblyReference.cache

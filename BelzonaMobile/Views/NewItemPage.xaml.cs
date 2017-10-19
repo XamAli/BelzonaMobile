@@ -33,8 +33,8 @@ namespace BelzonaMobile.Views
 
                 //Text = "Item name",
                 //Description = "This is an item description."
-                name = "Item name",
-                short_description = "This is an item description."
+                ProductName = "Item name",
+                ShortDesc = "This is an item description."
             };
 
             BindingContext = this;

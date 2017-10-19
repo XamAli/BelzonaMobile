@@ -9,7 +9,7 @@ namespace BelzonaMobile
 {
     public class L10n
 	{
-        const string ResourceId = "TodoLocalized.Resx.AppResources";
+        const string ResourceId = "BelzonaMobile.Resx.AppResources";
 
         public static void SetLocale (CultureInfo ci)
         {

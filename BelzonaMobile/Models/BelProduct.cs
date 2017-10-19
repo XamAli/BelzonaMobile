@@ -1,18 +1,21 @@
 ﻿using System;
+using Newtonsoft.Json;
+
 namespace BelzonaMobile
 {
     public class BelProduct
     {
-       
-
         public string file_path { get; set; }
         public string formulation_number { get; set; }
-        public string name { get; set; }
+        [JsonProperty(PropertyName = "name")]
+        public string ProductName { get; set; }
         public int series_id { get; set; }
         public int type_id { get; set; }
-        public string short_description { get; set; }
-        public string long_description { get; set; }
-
+        [JsonProperty(PropertyName = "short_description")]
+        public string ShortDesc { get; set; }
+        [JsonProperty(PropertyName = "long_description")]
+        public string LongDesc { get; set; }
+        public string product_image   { get; set; }
 
 
 

@@ -3,8 +3,12 @@
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/BelzonaMobile.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/ImageCircle.Forms.Plugin.Abstractions.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/ImageCircle.Forms.Plugin.iOS.dll
+/Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/MvvmHelpers.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/SQLite-net.dll
+/Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/SQLite.Net.Async.dll
+/Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/SQLite.Net.dll
+/Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/SQLite.Net.Platform.XamarinIOS.Unified.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.batteries_green.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.batteries_v2.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.core.dll
@@ -28,6 +32,8 @@
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.xml
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/SQLite-net.pdb
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/SQLite-net.xml
+/Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/MvvmHelpers.pdb
+/Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/MvvmHelpers.xml
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/Plugin.Connectivity.pdb
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/Plugin.Connectivity.xml
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/Plugin.Connectivity.Abstractions.pdb
@@ -68,7 +74,6 @@
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/bin/iPhoneSimulator/Debug/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/akarim/Desktop/Dev/BelzonaMobile/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.0/ibtool/_BundleResourceWithLogicalName.items
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.0/actool/_PartialAppManifest.items
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.0/actool/_BundleResourceWithLogicalName.items
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.0/optimized/Application.png

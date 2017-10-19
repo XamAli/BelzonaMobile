@@ -1,20 +1,25 @@
 ﻿<Properties StartupConfiguration="{31738905-41C8-4FED-B44E-50E534875EC5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/SQLite_iOS.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BelzonaMobile/Services/MockDataStore.cs">
     <Files>
-      <File FileName="BelzonaMobile/Views/ItemsPage.xaml.cs" Line="47" Column="10" />
-      <File FileName="BelzonaMobile/ViewModeles/ItemsViewModel.cs" Line="37" Column="1" />
-      <File FileName="BelzonaMobile/Views/TabbedPageCS.cs" Line="45" Column="3" />
-      <File FileName="BelzonaMobile/Services/MockDataStore.cs" Line="44" Column="37" />
-      <File FileName="BelzonaMobile/App.cs" Line="74" Column="20" />
-      <File FileName="BelzonaMobile/ISQLite.cs" Line="13" Column="1" />
-      <File FileName="iOS/SQLite_iOS.cs" Line="35" Column="9" />
+      <File FileName="BelzonaMobile/App.cs" Line="55" Column="13" />
+      <File FileName="BelzonaMobile/Views/ItemsPage.xaml.cs" Line="43" Column="54" />
+      <File FileName="BelzonaMobile/ViewModeles/ItemsViewModel.cs" Line="22" Column="78" />
+      <File FileName="BelzonaMobile/Models/BelProduct.cs" Line="15" Column="32" />
+      <File FileName="BelzonaMobile/Data/BelProductDatabase.cs" Line="53" Column="19" />
+      <File FileName="BelzonaMobile/Views/NewItemPage.xaml.cs" Line="29" Column="35" />
+      <File FileName="BelzonaMobile/Views/ItemsPage.xaml" Line="18" Column="64" />
+      <File FileName="BelzonaMobile/Services/CloudDataStore.cs" Line="81" Column="10" />
+      <File FileName="BelzonaMobile/Services/MockDataStore.cs" Line="97" Column="72" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/Views/NewItemPage.xaml.cs" relfile="BelzonaMobile/Views/NewItemPage.xaml.cs" line="36" column="28" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.BelzonaMobile.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.2166D36B-CD0D-4BFE-A022-1E5D208508E4" />
+  <MonoDevelop.Ide.ItemProperties.BelzonaMobile.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
 </Properties>

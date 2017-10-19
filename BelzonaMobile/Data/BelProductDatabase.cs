@@ -21,7 +21,7 @@ namespace BelzonaMobile
 		/// </param>
         public BelProductDatabase()
 		{
-			database = DependencyService.Get<ISQLite> ().GetConnection ();
+            database = DependencyService.Get<ISQLiteService> ().GetConnection ();
 			// create the tables
             database.CreateTable<BelProduct>();
 		}

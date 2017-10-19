@@ -37,7 +37,7 @@ using Android.OS;
 
 namespace BelzonaMobile.Droid
 {
-    [Activity(Label = "BelzonaMobile.Droid",  MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "BelzonaMobile.Droid",  Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)

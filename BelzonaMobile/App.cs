@@ -2,7 +2,9 @@
 using Xamarin.Forms;
 using System.Reflection;
 using BelzonaMobile.ViewModeles;
-
+using System.IO;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace BelzonaMobile
 {
@@ -27,27 +29,21 @@ namespace BelzonaMobile
         {
 
 
-            System.Diagnostics.Debug.WriteLine("====== resource debug info =========");
-            var assembly = typeof(App).GetTypeInfo().Assembly;
-            foreach (var res in assembly.GetManifestResourceNames())
-                System.Diagnostics.Debug.WriteLine("found resource: " + res);
-            System.Diagnostics.Debug.WriteLine("====================================");
+            //System.Diagnostics.Debug.WriteLine("====== resource debug info =========");
+            //var assembly = typeof(App).GetTypeInfo().Assembly;
+            //foreach (var res in assembly.GetManifestResourceNames())
+            //    System.Diagnostics.Debug.WriteLine("found resource: " + res);
+            //System.Diagnostics.Debug.WriteLine("====================================");
 
-            // This lookup NOT required for Windows platforms - the Culture will be automatically set
-            //if ( Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.Android )
 
+            //========= Localization/Globalization multi-lingual ==========
+            //if (Device.RuntimePlatform == Device.iOS )
             var ci = DependencyService.Get<ILocale>().GetCurrentCultureInfo();
+            //BelzonaMobile.Resx.AppResources.Culture = ci; // set the RESX for resource localization
             L10n.SetLocale(ci);
             Resx.AppResources.Culture = ci;
 
-            //if (Device.RuntimePlatform == Device.iOS )
-            //{
-            //    // determine the correct, supported .NET culture
-            //    var ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
-            //    BelzonaMobile.Resx.AppResources.Culture = ci; // set the RESX for resource localization
-            //    DependencyService.Get<ILocalize>().SetLocale(ci); // set the Thread for locale-aware methods
-            //}
-
+     
             //MainPage =  new MenuPage();
             //ProductManager = new ProductManager(new RestService());
             //MainPage = new MainPageCS();
@@ -81,6 +77,24 @@ namespace BelzonaMobile
         protected override void OnStart()
         {
             // Handle when your app starts
+            //var fileHelper = DependencyService.Get<IFileHelper>();
+
+            //string strText = string.Empty;
+
+            //var assembly = typeof(App).GetTypeInfo().Assembly;
+
+            //using (var stream = assembly.GetManifestResourceStream("BelzonaMobile.Data.app-manifest-products-us.json"))
+            //{
+            //    strText = new StreamReader(stream).ReadToEnd();
+            //}
+
+            //var questions = JsonConvert.DeserializeObject<List<BelProduct>>(strText);
+
+            //var azureService = DependencyService.Get<AzureService>();
+
+            //var questions = await azureService.GetQuestions();
+
+            //CurrentGame = new Game(questions);
         }
 
         protected override void OnSleep()
