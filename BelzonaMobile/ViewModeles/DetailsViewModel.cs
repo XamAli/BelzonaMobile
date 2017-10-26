@@ -2,8 +2,8 @@
 {
     public class DetailsViewModel
     {
-        public Product Product { get; set; }
-        public DetailsViewModel(Product product)
+        public BelProduct Product { get; set; }
+        public DetailsViewModel(BelProduct product)
         {
             Product = product;
         }

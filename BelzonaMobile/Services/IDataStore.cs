@@ -10,5 +10,6 @@ namespace BelzonaMobile
         //Task<bool> DeleteItemAsync(string id);
         Task<T> GetItemAsync(string id);
         Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
+        Task<IEnumerable<Grouping<string, T>>> GetItemGroupAsync();
     }
 }

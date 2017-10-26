@@ -1,10 +1,7 @@
 ﻿using BelzonaMobile.Views;
 using Xamarin.Forms;
-using System.Reflection;
 using BelzonaMobile.ViewModeles;
-using System.IO;
-using Newtonsoft.Json;
-using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace BelzonaMobile
 {
@@ -23,11 +20,11 @@ namespace BelzonaMobile
     public class App : Application
     {
         public static ProductManager ProductManager { get; private set; }
-        //static BelProductDatabase database;
+        public static LocalDataStore LocalDBConnection;
+
 
         public App()
         {
-
 
             //System.Diagnostics.Debug.WriteLine("====== resource debug info =========");
             //var assembly = typeof(App).GetTypeInfo().Assembly;
@@ -48,20 +45,73 @@ namespace BelzonaMobile
             //ProductManager = new ProductManager(new RestService());
             //MainPage = new MainPageCS();
            
+
+       
             if (Constants.UseMockDataStore)
                 DependencyService.Register<MockDataStore>();
             else
                 DependencyService.Register<CloudDataStore>();
 
-            if (Device.RuntimePlatform == Device.iOS)
-                //MainPage = new TabbedPageCS();
-                MainPage = new NavigationPage(new TabbedPageCS());
-                 //MainPage = new ItemsPage();
-            else
-                MainPage = new NavigationPage(new TabbedPageCS());
+            var nav = new NavigationPage(new TabbedPageCS());
+            nav.BarBackgroundColor = Color.FromHex("4BAADE"); //(Color)Current.Resources["primaryGreen"];
+            nav.BarTextColor = Color.White;
+            MainPage = nav;
+            //    //MainPage = new TabbedPageCS();
+            //    MainPage = new NavigationPage(new TabbedPageCS());
+            //     //MainPage = new ItemsPage();
+            //else
+                //MainPage = new NavigationPage(new TabbedPageCS());
             
         }
+        public static LocalDataStore LocalDatabase
+        {
+            get
+            {
+                if (LocalDBConnection == null)
+                {
+                    LocalDBConnection = new LocalDataStore(DependencyService.Get<IFileHelper>().GetLocalFilePath("BelProduct.db3"));
+                }
+                return LocalDBConnection;
+            }
+        }
+        //public void CreateAllTables()
+        //{
+        //    var db = DependencyService.Get<ISQLiteService>().GetConnection();
 
+        //    db.CreateTable<Models.dbProduct>();
+        //}
+
+        //public async Task CreateAllTablesAsync()
+        //{
+        //    var db = DependencyService.Get<ISQLiteService>().GetAsyncConnection();
+
+        //    await db.CreateTableAsync<Models.dbProduct>().ConfigureAwait(false);
+        //}
+
+        ///// <summary>
+        ///// Dropping tables ONLY works using the synchronous DB connection
+        ///// For some reason, dropping asynchronously fails miserably
+        ///// </summary>
+        //public void DropAllTables()
+        //{
+        //    var db = DependencyService.Get<ISQLiteService>().GetConnection();
+
+        //    db.DropTable<Models.dbProduct>();
+        //}
+        ////public bool TableExist()
+        ////{
+        ////    var db = DependencyService.Get<ISQLite>().GetConnection();
+        ////    var settings = db.Table<Movie>().ToList();
+        ////    return (settings.Count > 0) ? true : false;
+
+        ////}
+        //public static bool TableExists<T>(string TableName)
+        //{
+        //    var db = DependencyService.Get<ISQLiteService>().GetConnection();
+        //    string query = string.Format("SELECT name FROM sqlite_master WHERE type='table' AND name='{0}'", TableName);
+        //    var cmd = db.CreateCommand(query, typeof(T).Name);
+        //    return cmd.ExecuteScalar<string>() != null;
+        //}
         //public static BelProductDatabase Database
         //{
         //    get

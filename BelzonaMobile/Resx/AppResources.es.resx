@@ -18,16 +18,16 @@
         <comment>label for input field</comment>
     </data>
 	<data name="MenuTab1" xml:space="preserve">
-        <value>Serie</value>
+        <value>Favorito</value>
         <comment>TAB Menu FIRST ITEM</comment>
     </data>
-    <data name="MenuTab2" xml:space="preserve">
-        <value>Industria</value>
+	<data name="MenuTab2" xml:space="preserve">
+        <value>Serie</value>
         <comment>TAB Menu 2nd ITEM</comment>
     </data>
     <data name="MenuTab3" xml:space="preserve">
-        <value>Solicitud</value>
-        <comment>TAB Menu 3rd ITEM</comment>
+        <value>Industria</value>
+        <comment>TAB Menu 2nd ITEM</comment>
     </data>
     <data name="MenuTab4" xml:space="preserve">
         <value>Videos</value>

@@ -1,23 +1,36 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using Newtonsoft.Json;
 
 namespace BelzonaMobile
 {
+    public class BelProductGroup: ObservableCollection<BelProduct>
+    {
+        public string GroupName { get; set; }
+
+    }
     public class BelProduct
     {
-        public string file_path { get; set; }
-        public string formulation_number { get; set; }
+        [JsonProperty(PropertyName = "file_path")]
+        public string FilePath { get; set; }
+        [JsonProperty(PropertyName = "formulation_number")] 
+        public string Formulation { get; set; }
         [JsonProperty(PropertyName = "name")]
         public string ProductName { get; set; }
-        public int series_id { get; set; }
-        public int type_id { get; set; }
+        [JsonProperty(PropertyName = "series_id")]
+        public int SeriesId { get; set; }
+        [JsonProperty(PropertyName = "type_id")]
+        public int TypeId { get; set; }
         [JsonProperty(PropertyName = "short_description")]
         public string ShortDesc { get; set; }
         [JsonProperty(PropertyName = "long_description")]
         public string LongDesc { get; set; }
-        public string product_image   { get; set; }
+        //public string ProductInfo { get; set; }
+        public string ProductImage   { get; set; }
 
-
+        public string GroupName => String.Format("{0} Series", (SeriesId * 1000).ToString());
+        public string NameSort => ProductName[0].ToString();
+        public string ProductCode => String.Format("{0}.{1}.{2}", SeriesId.ToString(),Formulation.Trim(),TypeId.ToString());
 
         //public int VideoId { get; set; }
         //public string CategoryCode { get; set; }
@@ -27,14 +40,10 @@ namespace BelzonaMobile
         //public string VideoLink { get; set; }
         //public string YoutubeLink { get; set; }
 
-
-
-        //public string Name { get; set; }  // title or name or industry or Application
-        //public string Location { get; set; }
-        //public string Details { get; set; }
-        ////URL for our monkey image!
-        //public string Image { get; set; }
-
-        //public string NameSort => Name[0].ToString();
     }
+    //public class GroupedBelProducts : ObservableCollection<BelProduct>
+    //{
+    //    public string GroupName { get; set; }
+    //    public string ProductName { get; set; }
+    //}
 }

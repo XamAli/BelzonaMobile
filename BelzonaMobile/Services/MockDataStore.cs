@@ -1,34 +1,30 @@
-﻿using System.IO;
+﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using System.Reflection;
-using System;
 
 namespace BelzonaMobile
 {
     public class MockDataStore : IDataStore<BelProduct>
     {
-        List<BelProduct> BelItem;
+        //List<BelProduct> BelItem;
+        public  ObservableCollection<Grouping<string, BelProduct>> BelProdGrouped { get; set; }
+        public  ObservableCollection<BelProduct> BelProducts { get; set; }
 
         public MockDataStore()
         {
-            BelItem = new List<BelProduct>();
+            //BelItem = new List<BelProduct>();
 
-            //Writing to directory path
-            //var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            //var library = Path.Combine(documents, "..", "Library");
-            //var filename = Path.Combine(library, "WriteToLibrary.txt");
-            //File.WriteAllText(filename, "Write this text into a file in Library");
-            //BelProd = LoadResourceJson();
-            //var myObject = new List<BelProduct>();
-
-            var assembly = typeof(Views.ItemsPage).GetTypeInfo().Assembly;
-            foreach (var res in assembly.GetManifestResourceNames())
-            {
-                System.Diagnostics.Debug.WriteLine("found resource: " + res);
-            }
+            var assembly = typeof(Views.HomePage).GetTypeInfo().Assembly;
+            //foreach (var res in assembly.GetManifestResourceNames())
+            //{
+            //    System.Diagnostics.Debug.WriteLine("found resource: " + res);
+            //}
             try
             {
                 Stream stream = assembly.GetManifestResourceStream("BelzonaMobile.Data.app-manifest-products-us.json");
@@ -37,9 +33,26 @@ namespace BelzonaMobile
                 {
 
                     var json = reader.ReadToEnd();
-                    BelItem = JsonConvert.DeserializeObject<List<BelProduct>>(json);
+                    BelProducts = TransformObject(JsonConvert.DeserializeObject<List<BelProduct>>(json));
 
                     //var data  = JsonConvert.DeserializeObject<BelProduct>(json) ;
+
+                    var sorted = from prd in BelProducts
+                        orderby prd.GroupName
+                                 group prd by prd.GroupName into prdGroup
+                                 select new Grouping<string, BelProduct>(prdGroup.Key, prdGroup);
+
+                    //List<BelProduct> _list = new List<BelProduct>();
+                    //_list = new List<Grouping<string, BelProduct>>(sorted);
+
+                    //foreach (var item in products)
+                    //{
+                    //    _list.Add(item);
+                    //}
+
+                    BelProdGrouped = new ObservableCollection<Grouping<string, BelProduct>>(sorted);
+                    //System.Diagnostics.Debug.WriteLine(string.Format("Group 1:{0}", BelProdGrouped[0].Count.ToString()));
+                    System.Diagnostics.Debug.WriteLine(string.Format("MockDataStore Group:{0}", BelProdGrouped.Count.ToString()));
 
                 }
             }
@@ -47,67 +60,78 @@ namespace BelzonaMobile
             {
                 System.Diagnostics.Debug.WriteLine(string.Format("Error:{0}", ex.Message.ToString()));
             }
-            //mockup data
-            //var mockItems = new List<BelProduct>
-            //{
-            //    new BelProduct { file_path="", name = "Belzona 1111 (Super Metal)", series_id =1, type_id=1, short_description="An epoxy-based composite for metal repair.", long_description="A water-based acrylic emulsion membrane incorporating a polymer bonded glass reinforcing sheet (Belzona 9321) designed to provide seamless, flexible protection to all types of thermal insulation and cladding systems.</p>\n\n<p>Belzona 3211 (Lagseal) is water, weather and fire resistant, and conforms to the requirements for a &lsquo;Class O&rsquo; surface for &lsquo;The UK Building Regulations 1991&rsquo; and &lsquo;Class A&rsquo; in accordance with &lsquo;ASTM E84&rsquo;. The system provides protection from water ingress whilst its microporous nature allows trapped moisture from within the insulation to evaporate. This solvent-free, single pack system requires no mixing and is simple to apply to damp as well as dry insulation" },
-            //    new BelProduct { file_path="", name = "Belzona 1121 (Super Metal)", series_id =1, type_id=1, short_description="An epoxy-based composite for metal repair.", long_description="A water-based acrylic emulsion membrane incorporating a polymer bonded glass reinforcing sheet (Belzona 9321) designed to provide seamless, flexible protection to all types of thermal insulation and cladding systems.</p>\n\n<p>Belzona 3211 (Lagseal) is water, weather and fire resistant, and conforms to the requirements for a &lsquo;Class O&rsquo; surface for &lsquo;The UK Building Regulations 1991&rsquo; and &lsquo;Class A&rsquo; in accordance with &lsquo;ASTM E84&rsquo;. The system provides protection from water ingress whilst its microporous nature allows trapped moisture from within the insulation to evaporate. This solvent-free, single pack system requires no mixing and is simple to apply to damp as well as dry insulation" },
-            //    new BelProduct { file_path="", name = "Belzona 1111 (Super Metal)", series_id =1, type_id=1, short_description="This is an item description.", long_description="" },
-            //    new BelProduct { file_path="", name = "Belzona 3211 (Lagseal)", series_id =1, type_id=1, short_description="A single-component, seamless and flexible coating for encapsulation of all types of thermal insulation and cladding systems.", long_description="A water-based acrylic emulsion membrane incorporating a polymer bonded glass reinforcing sheet (Belzona 9321) designed to provide seamless, flexible protection to all types of thermal insulation and cladding systems.</p>\n\n<p>Belzona 3211 (Lagseal) is water, weather and fire resistant, and conforms to the requirements for a &lsquo;Class O&rsquo; surface for &lsquo;The UK Building Regulations 1991&rsquo; and &lsquo;Class A&rsquo; in accordance with &lsquo;ASTM E84&rsquo;. The system provides protection from water ingress whilst its microporous nature allows trapped moisture from within the insulation to evaporate. This solvent-free, single pack system requires no mixing and is simple to apply to damp as well as dry insulation" },
-            //    new BelProduct { file_path="", name = "Belzona 5122 (Clear Cladding)", series_id =1, type_id=1, short_description="Clear, water-repellent treatment for masonry surfaces..", long_description="A water-based acrylic emulsion membrane incorporating a polymer bonded glass reinforcing sheet (Belzona 9321) designed to provide seamless, flexible protection to all types of thermal insulation and cladding systems.</p>\n\n<p>Belzona 3211 (Lagseal) is water, weather and fire resistant, and conforms to the requirements for a &lsquo;Class O&rsquo; surface for &lsquo;The UK Building Regulations 1991&rsquo; and &lsquo;Class A&rsquo; in accordance with &lsquo;ASTM E84&rsquo;. The system provides protection from water ingress whilst its microporous nature allows trapped moisture from within the insulation to evaporate. This solvent-free, single pack system requires no mixing and is simple to apply to damp as well as dry insulation" },
-            //    new BelProduct { file_path="", name = "Sixth item", series_id =1, type_id=1, short_description="Clear, water-repellent treatment for masonry surfaces.", long_description="A water-based acrylic emulsion membrane incorporating a polymer bonded glass reinforcing sheet (Belzona 9321) designed to provide seamless, flexible protection to all types of thermal insulation and cladding systems.</p>\n\n<p>Belzona 3211 (Lagseal) is water, weather and fire resistant, and conforms to the requirements for a &lsquo;Class O&rsquo; surface for &lsquo;The UK Building Regulations 1991&rsquo; and &lsquo;Class A&rsquo; in accordance with &lsquo;ASTM E84&rsquo;. The system provides protection from water ingress whilst its microporous nature allows trapped moisture from within the insulation to evaporate. This solvent-free, single pack system requires no mixing and is simple to apply to damp as well as dry insulation" },
-            //    //new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-            //    //new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-            //    //new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-            //    //new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-            //    //new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." },
-            //};
-            //BelItem = mockItems;
-            //mock json file
-            //dynamic results = JsonConvert.DeserializeObject<dynamic>(System.IO.File.ReadAllText("elements.json"));
-            //foreach (var item in mockItems)
-            //{
-            //    BelItem.Add(item);
-            //}
-
         }
-        //public class Rootobject
-        //{
-        //    public Product[] products { get; set; }
-        //}
+        private ObservableCollection<BelProduct> TransformObject(List<BelProduct> products)
+        {
+            //throw new NotImplementedException();
+
+            ObservableCollection<BelProduct> _list = new ObservableCollection<BelProduct>();
+            //List<BelProduct> _list = new List<BelProduct>();
+            //foreach (var item in products)
+            //{
+            //    _list.Add(item);
+            //}
+            //string asciichar = (Convert.ToChar(62)).ToString();
+            foreach (var p in products)
+            {
+                BelProduct _bp = new BelProduct();
+                _bp.SeriesId = p.SeriesId;
+                _bp.TypeId = p.TypeId;
+                _bp.ProductName = p.ProductName;
+                //_bp.ShortDesc = Regex.Replace(p.ShortDesc, @"<(.|\n)*?>");
+                _bp.ShortDesc = Regex.Replace(p.ShortDesc, @"<(.|\n)*?>", string.Empty);
+                _bp.LongDesc = p.LongDesc;
+                _bp.FilePath = p.FilePath;
+                _bp.Formulation = p.Formulation;
+                //_bp.ProductInfo = Regex.Replace(p.LongDesc.Substring(0, 100), @"<(.|\n)*?>", string.Empty) + "...";
+                _bp.ProductImage = "belzonalogo_en_full.png";
+                //_bp.NextImage = (Convert.ToChar(62)).ToString();
+                _list.Add(_bp);
+            }
+            return _list;
+        }
 
         public async Task<bool> AddItemAsync(BelProduct item)
         {
-            BelItem.Add(item);
+            BelProducts.Add(item);
 
             return await Task.FromResult(true);
         }
 
         public async Task<bool> UpdateItemAsync(BelProduct item)
         {
-            var _item = BelItem.Where((BelProduct arg) => arg.ShortDesc == item.ShortDesc).FirstOrDefault();
-            BelItem.Remove(_item);
-            BelItem.Add(item);
+            var _item = BelProducts.Where((BelProduct arg) => arg.ShortDesc == item.ShortDesc).FirstOrDefault();
+            BelProducts.Remove(_item);
+            BelProducts.Add(item);
 
             return await Task.FromResult(true);
         }
 
         public async Task<bool> DeleteItemAsync(string id)
         {
-            var _item = BelItem.Where((BelProduct arg) => arg.ShortDesc == id).FirstOrDefault();
-            BelItem.Remove(_item);
+            var _item = BelProducts.Where((BelProduct arg) => arg.ShortDesc == id).FirstOrDefault();
+            BelProducts.Remove(_item);
 
             return await Task.FromResult(true);
         }
 
         public async Task<BelProduct> GetItemAsync(string id)
         {
-            return await Task.FromResult(BelItem.FirstOrDefault(s => s.ShortDesc == id));
+            return await Task.FromResult(BelProducts.FirstOrDefault(s => s.ShortDesc == id));
         }
 
         public async Task<IEnumerable<BelProduct>> GetItemsAsync(bool forceRefresh = false)
         {
-            return await Task.FromResult(BelItem);
+            return await Task.FromResult(BelProducts);
         }
+        public async Task<IEnumerable<Grouping<string, BelProduct>>> GetItemGroupAsync()
+        {
+            return await Task.FromResult(BelProdGrouped);
+        }
+        //public async Task<IEnumerable<Grouping<T>>> GetItemGroupsAsync()
+        //{
+        //    return await Task.FromResult(BelProdGrouped);
+        //    //return new Task<IEnumerable<BelProduct>>();
+        //}
     }
 }

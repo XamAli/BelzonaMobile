@@ -1,12 +1,8 @@
-﻿using System.Threading.Tasks;
-
+﻿using System;
 namespace BelzonaMobile
 {
     public interface IFileHelper
     {
-        Task<string> LoadLocalFileAsync(string filename);
-        Task<bool> SaveLocalFileAsync(string filename, string data);
-
-        string GetNameWithPath(string filename);
+        string GetLocalFilePath(string filename);
     }
 }

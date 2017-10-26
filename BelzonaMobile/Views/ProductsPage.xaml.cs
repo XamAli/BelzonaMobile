@@ -2,6 +2,8 @@
 using BelzonaMobile.ViewModeles;
 using Xamarin.Forms;
 
+
+//Product List Page datasource = ProductViewModel --> ProductHelper -->BelzonaMobile.Data.app-manifest-products-us.json
 namespace BelzonaMobile.Views
 {
     public partial class ProductsPage : ContentPage
@@ -17,7 +19,7 @@ namespace BelzonaMobile.Views
         void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {
 
-            var item = ((ListView)sender).SelectedItem as Product;
+            var item = ((ListView)sender).SelectedItem as BelProduct;
             if (item == null)
                 return;
 
@@ -27,15 +29,15 @@ namespace BelzonaMobile.Views
 
         void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = ((ListView)sender).SelectedItem as Product;
+            var item = ((ListView)sender).SelectedItem as ProductTable;
 
             //if (item == null)
             //return;
 
-            DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
+            //DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
             if (item != null)
             {
-                var newPage = new DetailsPage(item);
+                var newPage = new DetailsPage(item.Code);
                 Navigation.PushAsync(newPage);
             }
             else { return; }

@@ -5,15 +5,14 @@
         x:Class="BelzonaMobile.Views.ProductsPage"
         xmlns:design="clr-namespace:BelzonaMobile;assembly=BelzonaMobile"
         xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
-        BindingContext="{x:Static design:ViewModelLocator.ProductsViewModel}"
-        Title="Product List">
+        Title="Favorite List">
     <ContentPage.Content>
         <StackLayout>          
             <ListView ItemsSource="{Binding ProductGrouped}"
                     ItemTapped="Handle_ItemTapped"
                     ItemSelected="Handle_ItemSelected"
                     HasUnevenRows="true"
-                    GroupShortNameBinding = "{Binding Key}"
+
                     IsGroupingEnabled = "true"
                     GroupDisplayBinding = "{Binding Key}">
                 <ListView.ItemTemplate>
@@ -37,14 +36,14 @@
                                     </Image>
                                 <Label Grid.Column="1"
                                        Grid.Row="0"
-                                       Text="{Binding Name}"
+                                       Text="{Binding ProductName}"
                                        VerticalOptions="Start"
                                         Font="Bold,16"/>
                                 <Label Grid.Column="1"
                                        Grid.Row="1"
                                        Font="normal,12"
                                        VerticalOptions="Start"
-                                       Text="{Binding Location}"/>
+                                       Text="{Binding ShortDesc}"/>
                                 <controls:CircleImage 
                                         BorderColor="gray"
                                         BorderThickness="3"
@@ -55,7 +54,7 @@
                                        WidthRequest="66"
                                        Grid.Column ="2"
                                        Grid.RowSpan="2"
-                                       Source="{Binding Image}"/>
+                                       Source="{Binding ProductImage}"/>
                                  
                             </Grid>
                         </ViewCell>

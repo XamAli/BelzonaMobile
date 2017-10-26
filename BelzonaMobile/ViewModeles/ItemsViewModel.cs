@@ -19,21 +19,26 @@ namespace BelzonaMobile.ViewModeles
 {
     public class ItemsViewModel : BaseViewModel
     {
-        public ObservableCollection<BelProduct> BelProductItems { get; set; }
+        public ObservableCollection<BelProduct> BelProducts { get; set; }
+        public  ObservableCollection<Grouping<string, BelProduct>> BelProdGrouped { get; set; }
         public Command LoadItemsCommand { get; set; }
-
+       
         public ItemsViewModel()
         {
             //Title = "Product List";
-            BelProductItems = new ObservableCollection<BelProduct>();
+            BelProducts = new ObservableCollection<BelProduct>();
+            BelProdGrouped = new ObservableCollection<Grouping<string, BelProduct>>();
+
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            MessagingCenter.Subscribe<NewItemPage, BelProduct>(this, "AddItem", async (obj, item) =>
-            {
-                var _item = item as BelProduct;
-                BelProductItems.Add(_item);
-                await DataStore.AddItemAsync(_item);
-            });
+            System.Diagnostics.Debug.WriteLine(string.Format("ItemsPage :{0}", BelProducts.Count.ToString()));
+
+          //MessagingCenter.Subscribe<NewItemPage, BelProduct>(this, "AddItem", async (obj, item) =>
+            //{
+            //    var _item = item as BelProduct;
+            //    BelProducts.Add(_item);
+            //    await DataStore.AddItemAsync(_item);
+            //});
         }
 
         async Task ExecuteLoadItemsCommand()
@@ -44,12 +49,26 @@ namespace BelzonaMobile.ViewModeles
             IsBusy = true;
             try
             {
-                BelProductItems.Clear();
+                BelProducts.Clear();
                 var items = await DataStore.GetItemsAsync(true);
                 foreach (var item in items)
                 {
-                    BelProductItems.Add(item);
+                    BelProducts.Add(item);
                 }
+                //DisplayAlert("On Disappearing", String.Format("Page OnDisappearing {0}", BelProducts.Count.ToString()), "Ok");
+                System.Diagnostics.Debug.WriteLine(string.Format("ExecuteLoadItemsCommand Product:{0}", BelProducts.Count.ToString()));
+                BelProdGrouped.Clear();
+                //BelProdGrouped = await DataStore.GetItemGroupAsync();
+                    //(System.Collections.ObjectModel.ObservableCollection<BelzonaMobile.Grouping<string, BelzonaMobile.BelProduct>>) await DataStore.GetItemGroupAsync();
+                //foreach (var grp in gItems)
+                //{
+                //    BelProdGrouped.Add(grp);
+                //}
+
+                //BelProdGrouped = grp;
+                System.Diagnostics.Debug.WriteLine(string.Format("ExecuteLoadItemsCommand Group:{0}", BelProdGrouped.Count.ToString()));
+                //System.Diagnostics.Debug.WriteLine(string.Format("ExecuteLoadItemsCommand Group:{0}", BelProdGrouped.Count.ToString()));
+
             }
             catch (Exception ex)
             {
@@ -60,5 +79,6 @@ namespace BelzonaMobile.ViewModeles
                 IsBusy = false;
             }
         }
+        //public int GroupCount => ItemsViewModel.BelProdGrouped.Count;
     }
 }

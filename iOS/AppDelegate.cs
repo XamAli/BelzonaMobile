@@ -18,6 +18,8 @@ namespace BelzonaMobile.iOS
             ImageCircle.Forms.Plugin.iOS.ImageCircleRenderer.Init();
 
             return base.FinishedLaunching(app, options);
+
         }
+       
     }
 }

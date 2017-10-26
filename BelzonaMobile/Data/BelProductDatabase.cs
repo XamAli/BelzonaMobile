@@ -44,22 +44,17 @@ namespace BelzonaMobile
 		{
 			lock (locker) {
                 //return database.Table<BelProduct>().FirstOrDefault(x => x.ID == id);
-                return database.Table<BelProduct>().FirstOrDefault(x => x.series_id == id);
+                return database.Table<BelProduct>().FirstOrDefault(x => x.SeriesId == id);
 			}
 		}
 
         public int SaveItem (BelProduct item) 
 		{
 			lock (locker) {
-				//if (item.ID != 0) {
-				//	database.Update(item);
-				//	return item.ID;
-				//} else {
-				//	return database.Insert(item);
-				//}
-                if (item.series_id != 0) {
+
+                if (item.SeriesId != 0) {
                   database.Update(item);
-                    return item.series_id;
+                    return item.SeriesId;
                 } else {
                   return database.Insert(item);
                 }

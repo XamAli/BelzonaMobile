@@ -17,17 +17,17 @@
         <value>Product List</value>
         <comment>label for input field</comment>
     </data>
-    <data name="MenuTab1" xml:space="preserve">
-        <value>Series</value>
+	 <data name="MenuTab1" xml:space="preserve">
+        <value>Favorite</value>
         <comment>TAB Menu FIRST ITEM</comment>
     </data>
     <data name="MenuTab2" xml:space="preserve">
-        <value>Industry</value>
+        <value>Series</value>
         <comment>TAB Menu 2nd ITEM</comment>
     </data>
-	<data name="MenuTab3" xml:space="preserve">
-        <value>Application</value>
-        <comment>TAB Menu 3rd ITEM</comment>
+    <data name="MenuTab3" xml:space="preserve">
+        <value>Industry</value>
+        <comment>TAB Menu 2nd ITEM</comment>
     </data>
 	<data name="MenuTab4" xml:space="preserve">
         <value>Videos</value>

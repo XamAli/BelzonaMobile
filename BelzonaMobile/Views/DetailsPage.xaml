@@ -6,7 +6,7 @@
         xmlns:design="clr-namespace:BelzonaMobile;assembly=BelzonaMobile"
         xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
         BindingContext="{x:Static design:ViewModelLocator.DetailsViewModel}"
-        Title="{Binding Product.Name}">
+        Title="{Binding ProductName}">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="10">
@@ -17,14 +17,14 @@
                         WidthRequest="200"
                         HorizontalOptions="CenterAndExpand"
                         Aspect="AspectFill"
-                        Source="{Binding Product.Image}"/>
-                <Label Text="{Binding Product.Name}" Font="Bold, 24" TextColor="#0066cc"/>
-                <Label Text="{Binding Product.Location}" FontSize="16" />
+                        Source="{Binding ProductImage}"/>
+                <Label Text="{Binding ProductName}" Font="Bold, 24" TextColor="#0066cc"/>
+                <Label Text="{Binding ShortDesc}" FontSize="16" />
                 <BoxView 
                         HeightRequest="2" 
                         BackgroundColor="#0066cc" 
                         HorizontalOptions="FillAndExpand" />
-                <Label Text="{Binding Product.Details}" FontSize="12"/>
+                <Label Text="{Binding LongDesc}" FontSize="12"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

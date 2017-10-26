@@ -8,125 +8,162 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BelzonaMobile.Resx {
+namespace BelzonaMobile.Resx
+{
     using System;
     using System.Reflection;
-    
-    
+
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class AppResources {
-        
+    internal class AppResources
+    {
+
         private static System.Resources.ResourceManager resourceMan;
-        
+
         private static System.Globalization.CultureInfo resourceCulture;
-        
+
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal AppResources() {
+        internal AppResources()
+        {
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static System.Resources.ResourceManager ResourceManager {
-            get {
-                if (object.Equals(null, resourceMan)) {
+        internal static System.Resources.ResourceManager ResourceManager
+        {
+            get
+            {
+                if (object.Equals(null, resourceMan))
+                {
                     System.Resources.ResourceManager temp = new System.Resources.ResourceManager("BelzonaMobile.Resx.AppResources", typeof(AppResources).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static System.Globalization.CultureInfo Culture {
-            get {
+        internal static System.Globalization.CultureInfo Culture
+        {
+            get
+            {
                 return resourceCulture;
             }
-            set {
+            set
+            {
                 resourceCulture = value;
             }
         }
-        
-        internal static string PageTitle {
-            get {
+
+        internal static string PageTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PageTitle", resourceCulture);
             }
         }
-        
-        internal static string MenuTab1 {
-            get {
+
+        internal static string MenuTab1
+        {
+            get
+            {
                 return ResourceManager.GetString("MenuTab1", resourceCulture);
             }
         }
-        
-        internal static string MenuTab2 {
-            get {
+
+        internal static string MenuTab2
+        {
+            get
+            {
                 return ResourceManager.GetString("MenuTab2", resourceCulture);
             }
         }
-        
-        internal static string MenuTab3 {
-            get {
+
+        internal static string MenuTab3
+        {
+            get
+            {
                 return ResourceManager.GetString("MenuTab3", resourceCulture);
             }
         }
-        
-        internal static string MenuTab4 {
-            get {
+
+        internal static string MenuTab4
+        {
+            get
+            {
                 return ResourceManager.GetString("MenuTab4", resourceCulture);
             }
         }
-        
-        internal static string MenuTab5 {
-            get {
+
+        internal static string MenuTab5
+        {
+            get
+            {
                 return ResourceManager.GetString("MenuTab5", resourceCulture);
             }
         }
-        
-        internal static string NotesLabel {
-            get {
+
+        internal static string NotesLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("NotesLabel", resourceCulture);
             }
         }
-        
-        internal static string NotesPlaceholder {
-            get {
+
+        internal static string NotesPlaceholder
+        {
+            get
+            {
                 return ResourceManager.GetString("NotesPlaceholder", resourceCulture);
             }
         }
-        
-        internal static string PickerName {
-            get {
+
+        internal static string PickerName
+        {
+            get
+            {
                 return ResourceManager.GetString("PickerName", resourceCulture);
             }
         }
-        
-        internal static string AddButton {
-            get {
+
+        internal static string AddButton
+        {
+            get
+            {
                 return ResourceManager.GetString("AddButton", resourceCulture);
             }
         }
-        
-        internal static string AddMessage0 {
-            get {
+
+        internal static string AddMessage0
+        {
+            get
+            {
                 return ResourceManager.GetString("AddMessage0", resourceCulture);
             }
         }
-        
-        internal static string AddMessage1 {
-            get {
+
+        internal static string AddMessage1
+        {
+            get
+            {
                 return ResourceManager.GetString("AddMessage1", resourceCulture);
             }
         }
-        
-        internal static string AddMessageN {
-            get {
+
+        internal static string AddMessageN
+        {
+            get
+            {
                 return ResourceManager.GetString("AddMessageN", resourceCulture);
             }
         }
-        
-        internal static string CancelButton {
-            get {
+
+        internal static string CancelButton
+        {
+            get
+            {
                 return ResourceManager.GetString("CancelButton", resourceCulture);
             }
         }

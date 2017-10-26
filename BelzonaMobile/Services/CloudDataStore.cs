@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,8 @@ namespace BelzonaMobile
     {
         HttpClient client;
         IEnumerable<BelProduct> items;
+        public  ObservableCollection<Grouping<string, BelProduct>> BelProdGrouped { get; set; }
+        public  ObservableCollection<BelProduct> BelProducts { get; set; }
 
         public CloudDataStore()
         {
@@ -100,6 +103,10 @@ namespace BelzonaMobile
             var response = await client.DeleteAsync($"api/item/{id}");
 
             return response.IsSuccessStatusCode;
+        }
+        public async Task<IEnumerable<Grouping<string, BelProduct>>> GetItemGroupAsync()
+        {
+            return await Task.FromResult(BelProdGrouped);
         }
     }
 }
