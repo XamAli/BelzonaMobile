@@ -41,9 +41,31 @@ namespace BelzonaMobile
         //public string YoutubeLink { get; set; }
 
     }
-    //public class GroupedBelProducts : ObservableCollection<BelProduct>
-    //{
-    //    public string GroupName { get; set; }
-    //    public string ProductName { get; set; }
-    //}
+    public class BelProductIndus
+    {
+        [JsonProperty(PropertyName = "video_")]
+        public string VideoId { get; set; }
+        [JsonProperty(PropertyName = "code")]
+        public string Code { get; set; }
+        [JsonProperty(PropertyName = "title")]
+        public string Title { get; set; }
+        [JsonProperty(PropertyName = "short_description")]
+        public string ShortDesc { get; set; }
+        [JsonProperty(PropertyName = "long_description")]
+        public string LongDesc { get; set; }
+
+        public string VideoName { get; set; }
+        public string DataLink { get; set; }
+        public int Size { get; set; }
+        public string YoutubeLink { get; set; }
+        public string VideoDescription { get; set; }
+
+        //public string ProductImage { get; set; }
+
+        //public string GroupName => String.Format("{0} Series", (SeriesId * 1000).ToString());
+        //public string NameSort => ProductName[0].ToString();
+        //public string ProductCode => String.Format("{0}.{1}.{2}", SeriesId.ToString(), Formulation.Trim(), TypeId.ToString());
+
+    }
 }
+

@@ -100,10 +100,10 @@
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.0.1/optimized/pt.lproj/Default@2x.png
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.0.1/optimized/pt.lproj/flag.png
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.0.1/optimized/BlueStar.png
+/Users/akarim/Desktop/Dev/BelzonaMobile/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.0.1/optimized/thumb_1221.png
+/Users/akarim/Desktop/Dev/BelzonaMobile/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.0.1/optimized/thumb_1111.png
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.0.1/optimized/
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/obj/iPhoneSimulator/Debug/BelzonaMobile.iOS.csprojResolveAssemblyReference.cache
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/obj/iPhoneSimulator/Debug/BelzonaMobile.iOS.csproj.CoreCompileInputs.cache
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/obj/iPhoneSimulator/Debug/BelzonaMobile.iOS.exe
 /Users/akarim/Desktop/Dev/BelzonaMobile/iOS/obj/iPhoneSimulator/Debug/BelzonaMobile.iOS.pdb
-/Users/akarim/Desktop/Dev/BelzonaMobile/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.0.1/optimized/thumb_1221.png
-/Users/akarim/Desktop/Dev/BelzonaMobile/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.0.1/optimized/thumb_1111.png

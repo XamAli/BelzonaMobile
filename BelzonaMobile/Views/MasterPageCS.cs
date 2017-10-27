@@ -13,12 +13,12 @@ namespace BelzonaMobile.Views
         {
             //this.BackgroundColor = Color.Gray;
             var menuItems = new List<MasterMenuItem>();
-            menuItems.Add(new MasterMenuItem
-			{
-				Title = "Product Page",
-                IconSource = "Favorites.png",
-                TargetType = typeof(TabbedPageCS)
-			});
+   //         menuItems.Add(new MasterMenuItem
+			//{
+			//	Title = "Product Page",
+   //             IconSource = "Favorites.png",
+   //             TargetType = typeof(TabbedPageCS)
+			//});
             menuItems.Add(new MasterMenuItem
             {
                 Title = "Contacts Us",
@@ -41,7 +41,7 @@ namespace BelzonaMobile.Views
             {
                 Title = "Settings",
                 IconSource = "reminders.png",
-                TargetType = typeof(ContactPage)
+                TargetType = typeof(SqlAdmin)
             });
 
             _listView = new ListView

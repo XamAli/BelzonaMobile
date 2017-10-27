@@ -14,6 +14,9 @@
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.Views.ItemDetailPage.xaml.g.cs
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.Views.ProductListLocalDb.xaml.g.cs
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.Views.FavouriteList.xaml.g.cs
+/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.Views.MyPage.xaml.g.cs
+/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.Views.SqlAdmin.xaml.g.cs
+/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.Views.IndustryListPage.xaml.g.cs
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/BelzonaMobile.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/BelzonaMobile.pdb
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/bin/Debug/es/BelzonaMobile.resources.dll

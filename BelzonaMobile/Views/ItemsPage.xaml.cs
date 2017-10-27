@@ -52,27 +52,8 @@ namespace BelzonaMobile.Views
             if (viewModel.BelProducts.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
             
-            //DisplayAlert("On Appearing", String.Format("Page OnDisappearing {0}", viewModel.BelProducts.Count.ToString()), "Ok");
-            System.Diagnostics.Debug.WriteLine(string.Format("OnAppearing :{0}", viewModel.BelProducts.Count.ToString()));
-            //var groupedData = ItemsViewModel.BelProdGrouped;
-            //foreach (var group in groupedData)
-            //{
-            //    var groupKey = group.Key;
-            //    foreach (var items in group)
-            //        //DoSomethingWith(groupKey, groupedItem);
-            //        //System.Diagnostics.Debug.WriteLine(string.Format("Key :{0}-{1}",groupKey, items.GroupName));
-            //}
-            //if ((viewModel != null) && (viewModel.BelProdGrouped != null)) { }
-            //    foreach (var K in viewModel.BelProdGrouped)
-            //    {
+             //System.Diagnostics.Debug.WriteLine(string.Format("OnAppearing :{0}", viewModel.BelProducts.Count.ToString()));
 
-            //    }
-            //}
-            //GroupCount = groupedData.Count;
-            //System.Diagnostics.Debug.WriteLine(string.Format("ItemsViewModel.BelProdGrouped Group:{0}", ItemsViewModel.BelProdGrouped.Count.ToString()));
-
-
-            //ItemsListView.ItemsSource = App.Database.GetItems();
         }
         void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {

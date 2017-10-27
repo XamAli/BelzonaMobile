@@ -22,7 +22,7 @@ namespace BelzonaMobile
         public static ProductManager ProductManager { get; private set; }
         public static LocalDataStore LocalDBConnection;
 
-
+        public static string CurrentLingo { get; set; }
         public App()
         {
 
@@ -39,7 +39,7 @@ namespace BelzonaMobile
             //BelzonaMobile.Resx.AppResources.Culture = ci; // set the RESX for resource localization
             L10n.SetLocale(ci);
             Resx.AppResources.Culture = ci;
-
+            CurrentLingo = ci.ToString();
      
             //MainPage =  new MenuPage();
             //ProductManager = new ProductManager(new RestService());

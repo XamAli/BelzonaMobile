@@ -1,30 +1,10 @@
 ﻿<Properties StartupConfiguration="{31738905-41C8-4FED-B44E-50E534875EC5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BelzonaMobile/Views/WebViewPage.cs">
-    <Files>
-      <File FileName="BelzonaMobile/Resx/AppResources.resx" Line="30" Column="45" />
-      <File FileName="BelzonaMobile/Resx/AppResources.Designer.cs" Line="8" Column="21" />
-      <File FileName="BelzonaMobile/Views/TabbedPageCS.cs" Line="57" Column="16" />
-      <File FileName="BelzonaMobile/Views/FavouriteList.xaml" Line="11" Column="21" />
-      <File FileName="BelzonaMobile/Views/FavouriteList.xaml.cs" Line="47" Column="9" />
-      <File FileName="BelzonaMobile/Views/ProductListLocalDb.xaml" Line="24" Column="55" />
-      <File FileName="BelzonaMobile/Views/ProductListLocalDb.xaml.cs" Line="38" Column="22" />
-      <File FileName="iOS/Main.cs" Line="21" Column="1" />
-      <File FileName="BelzonaMobile/Services/LocalDatatStore.cs" Line="31" Column="33" />
-      <File FileName="BelzonaMobile/Models/ProductTable.cs" Line="1" Column="1" />
-      <File FileName="BelzonaMobile/Views/ProductDetailWebView.cs" Line="44" Column="13" />
-      <File FileName="BelzonaMobile/Views/ItemDetailPage.xaml.cs" Line="23" Column="2" />
-      <File FileName="BelzonaMobile/Views/ItemsPage.xaml.cs" Line="109" Column="35" />
-      <File FileName="BelzonaMobile/Views/ItemsPage.xaml" Line="19" Column="1" />
-      <File FileName="BelzonaMobile/Views/DetailsPage.xaml" Line="31" Column="15" />
-      <File FileName="BelzonaMobile/Views/DetailsPage.xaml.cs" Line="29" Column="2" />
-      <File FileName="BelzonaMobile/Views/ProductsPage.xaml.cs" Line="37" Column="78" />
-      <File FileName="BelzonaMobile/Services/MockDataStore.cs" Line="82" Column="89" />
-      <File FileName="BelzonaMobile/Views/WebViewPage.cs" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/Helpers/LocalDbHelper.cs" relfile="BelzonaMobile/Helpers/LocalDbHelper.cs" line="56" column="39" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />

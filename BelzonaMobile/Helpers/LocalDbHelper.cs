@@ -53,7 +53,7 @@ namespace BelzonaMobile
             if (App.LocalDBConnection == null)
             {
                 LocalDataStore _conn = new LocalDataStore(DependencyService.Get<IFileHelper>().GetLocalFilePath("BelProduct.db3"));
-                var  results =  _conn.GetItemsAsync();
+                var  results =  _conn.GetProductTableAsync();
             }
             //foreach(var item in results) {
             //    System.Diagnostics.Debug.WriteLine(string.Format("Error:{0}", .ToString()));

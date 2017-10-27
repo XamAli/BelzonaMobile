@@ -8,7 +8,7 @@ namespace BelzonaMobile.Views
 	{
         public TabbedPageCS()
 		{
-            //Title = "Product Info";
+            Title = "Product Info";
             //Title = Resx.AppResources.PageTitle;
 
            // Icon = "belzonalogo_es_24.png";
@@ -57,11 +57,11 @@ namespace BelzonaMobile.Views
             navigationPage.Title = String.Format(@"{0} List", MenuTab1);
   
             Children.Add(new FavouriteList("Favorites") { Icon = "Favorites.png", Title = MenuTab1});
-            Children.Add(new ProductListLocalDb() { Icon = "Series.png", Title = MenuTab2 });
-            Children.Add(new ItemsPage() { Icon = "Industry.png", Title = MenuTab3 });
+            Children.Add(new ProductListLocalDb("Series") { Icon = "Series.png", Title = MenuTab2 });
+            Children.Add(new IndustryListPage("Industry") { Icon = "Industry.png", Title = MenuTab3 });
 
             Children.Add(new ItemsPage() { Icon = "Application.png", Title = MenuTab4 });
-            Children.Add(new MasterPageCS() { Icon = "hamburger.png", Title = string.Format("{0} ...",MenuTab5) });
+            Children.Add(new MenuPage() { Icon = "hamburger.png", Title = string.Format("{0} ...",MenuTab5) });
 
 
            

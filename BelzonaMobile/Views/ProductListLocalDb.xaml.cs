@@ -13,9 +13,11 @@ namespace BelzonaMobile.Views
     public partial class ProductListLocalDb : ContentPage
     {
         public ObservableCollection<ProductTable> ProductTable { get; set; }
-        public ProductListLocalDb()
+        public string PageTitle { get; set; }
+        public ProductListLocalDb(string pTitle)
         {
             InitializeComponent();
+            PageTitle = pTitle;
            // BindingContext = new ProductListLocalDbViewModel();
         }
 
@@ -51,6 +53,7 @@ namespace BelzonaMobile.Views
             //((App)App.Current).ResumeAtTodoId = -1;
 
             List <ProductTable> results = await App.LocalDatabase.GetAllProductsAsync();
+
             //ObservableCollection<Grouping<string, ProductTable>> Group = SortAndGroup(results);
             ObservableCollection<ProductTable> objProd = new ObservableCollection<ProductTable>();
             //foreach(ProductTable p in results) {

@@ -64,8 +64,10 @@ namespace BelzonaMobile.Views
         protected override async void OnAppearing()
         {
             //((App)App.Current).ResumeAtTodoId = -1;
+            List<ProductTable> results = new List<BelzonaMobile.ProductTable>();
+            try { results = await App.LocalDatabase.GetSelectedProductsAsync(); }
+            catch { return; }
 
-            List<ProductTable> results = await App.LocalDatabase.GetSelectedProductsAsync();
             //ObservableCollection<Grouping<string, ProductTable>> Group = SortAndGroup(results);
             ObservableCollection<ProductTable> objProd = new ObservableCollection<ProductTable>();
             int cntr = 0;

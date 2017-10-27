@@ -71,6 +71,16 @@
     <EmbeddedResource Include="Views\FavouriteList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\MyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SqlAdmin.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\app-manifest-ind-app-us.json" />
+    <EmbeddedResource Include="Views\IndustryListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MyListViewPage.xaml.cs">
@@ -149,6 +159,12 @@
       <DependentUpon>FavouriteList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WebViewPage.cs" />
+    <Compile Include="Views\SqlAdmin.xaml.cs">
+      <DependentUpon>SqlAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IndustryListPage.xaml.cs">
+      <DependentUpon>IndustryListPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ImageCircle.Forms.Plugin.Abstractions">
@@ -200,6 +216,7 @@
     <None Include="Services\ProductSqlService.cs" />
     <None Include="Services\IProductSqlService.cs" />
     <None Include="Data\BelProductDatabase.cs" />
+    <None Include="Helpers\EmptyTextFile.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />

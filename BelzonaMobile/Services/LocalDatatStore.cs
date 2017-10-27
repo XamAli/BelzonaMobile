@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using SQLite;
@@ -14,8 +15,29 @@ namespace BelzonaMobile
             database = new SQLiteAsyncConnection(dbPath);
             //database.CreateTableAsync<ProductTable>().Wait();
         }
-
-        public Task<List<ProductTable>> GetItemsAsync()
+        public Task<List<LocalTable>>  GetLocalTablesAsync()
+        {
+            try
+            {
+                return database.QueryAsync<LocalTable>("Select * from sqlite_master Where Name !='sqlite_sequence'");
+            }
+            catch { return null;  }
+        }
+        public Task<List<IndustryTable>> GetIndustryTablesAsync()
+        {
+            try
+            {
+                //return database.QueryAsync<LocalTable>("Select * from Industry");
+                return database.Table<IndustryTable>().ToListAsync();
+            }
+            catch { return null; }
+        }
+        public Task<SettingTable> GetSettingsAsync()
+        {
+            //return database.Table<SettingTable>();
+            return database.Table<SettingTable>().Where(i => i.CurrentLingo != null).FirstOrDefaultAsync();
+        }
+        public Task<List<ProductTable>> GetProductTableAsync()
         {
             return database.Table<ProductTable>().ToListAsync();
         }
@@ -46,7 +68,7 @@ namespace BelzonaMobile
             return database.Table<ProductTable>().Where(i => i.ID == id).FirstOrDefaultAsync();
         }
 
-        public Task<int> SaveItemAsync(ProductTable item)
+        public Task<int> SaveProductTableAsync(ProductTable item)
         {
             if (item.ID != 0)
             {
@@ -57,10 +79,58 @@ namespace BelzonaMobile
                 return database.InsertAsync(item);
             }
         }
-
-        public Task<int> DeleteItemAsync(ProductTable item)
+        public Task<int> SaveSettingAsync(SettingTable item)
         {
-            return database.DeleteAsync(item);
+            if (item.ID != 0)
+            {
+                return database.UpdateAsync(item);
+            }
+            else
+            {
+                return database.InsertAsync(item);
+            }
+        }
+        public Task<int> SaveIndustryAsync(IndustryTable item)
+        {
+            if (item.ID != 0)
+            {
+                return database.UpdateAsync(item);
+            }
+            else
+            {
+                return database.InsertAsync(item);
+            }
+        }
+        public Task<int> DeleteProductTableAsync(ProductTable item)
+        {
+            try { return database.DeleteAsync(item); }
+            catch (Exception ex) { System.Diagnostics.Debug.WriteLine("Error:{0}", ex.Message.ToString()); return null; }
+        }
+        public Task<int> DeleteIndustryTableAsync(IndustryTable item)
+        {
+            try { return database.DeleteAsync(item); }
+            catch (Exception ex) { System.Diagnostics.Debug.WriteLine("Error:{0}", ex.Message.ToString()); return null; }
+        }
+        public Task<int> DeleteVideoTableAsync(VideoTable item)
+        {
+            try { return database.DeleteAsync(item); }
+            catch (Exception ex) { System.Diagnostics.Debug.WriteLine("Error:{0}", ex.Message.ToString()); return null; }
+        }
+        public void CreateSettingTableAsync()
+        {
+            database.CreateTableAsync<SettingTable>().Wait();
+        }
+        public void CreateProductTableAsync()
+        {
+            database.CreateTableAsync<ProductTable>().Wait();
+        }
+        public void CreateIndustryTableAsync()
+        {
+            database.CreateTableAsync<IndustryTable>().Wait();
+        }
+        public void CreateVideoTableAsync()
+        {
+            database.CreateTableAsync<VideoTable>().Wait();
         }
         //string locationpath = string.Empty;
             //try
