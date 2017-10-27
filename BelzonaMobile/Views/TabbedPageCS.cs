@@ -60,7 +60,7 @@ namespace BelzonaMobile.Views
             Children.Add(new ProductListLocalDb("Series") { Icon = "Series.png", Title = MenuTab2 });
             Children.Add(new IndustryListPage("Industry") { Icon = "Industry.png", Title = MenuTab3 });
 
-            Children.Add(new ItemsPage() { Icon = "Application.png", Title = MenuTab4 });
+            Children.Add(new VideoListPage("Video") { Icon = "Videos.png", Title = MenuTab4 });
             Children.Add(new MenuPage() { Icon = "hamburger.png", Title = string.Format("{0} ...",MenuTab5) });
 
 

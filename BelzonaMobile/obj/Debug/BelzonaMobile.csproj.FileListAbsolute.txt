@@ -56,3 +56,4 @@
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/pt/BelzonaMobile.resources.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.dll
 /Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.pdb
+/Users/akarim/Desktop/Dev/BelzonaMobile/BelzonaMobile/obj/Debug/BelzonaMobile.Views.VideoListPage.xaml.g.cs

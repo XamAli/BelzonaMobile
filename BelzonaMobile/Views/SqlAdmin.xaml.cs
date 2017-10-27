@@ -154,7 +154,7 @@ namespace BelzonaMobile.Views
                     _video.YoutubeLink = item.YoutubeLink;
                     _video.DataLink = item.DataLink;
                     _video.VideoDescription = item.VideoDescription;
-                    int iC = await App.LocalDatabase.SaveIndustryAsync(_industry);
+                    int iC = await App.LocalDatabase.SaveVideoAsync(_video);
                     lastCode = item.Code;
                     child++;
                 }

@@ -37,16 +37,6 @@ namespace BelzonaMobile
         public string Name { get; set; }
         public int Seq { get; set; }
     }
-    //video_id": 93,
-    //"code": "",
-    //"title": "",
-    //"short_description": "",
-    //"long_description": "",
-    //"VideoName": ",
-    //"DataLink": ",
-    //"Size": 55,
-    //"YoutubeLink": "
-    //"VideoDescription":
     public class IndustryTable
     {
 
@@ -71,5 +61,8 @@ namespace BelzonaMobile
         public int Size { get; set; }
         public string YoutubeLink { get; set; }
         public string VideoDescription { get; set; }
+        public string ProductImage { get; set; }
+        public double Opacity { get; set; }
+ 
     }
 }

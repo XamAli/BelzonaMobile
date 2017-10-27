@@ -32,6 +32,23 @@ namespace BelzonaMobile
             }
             catch { return null; }
         }
+        public Task<List<VideoTable>> GetVideoTablesAsync()
+        {
+            try
+            {
+                //return database.QueryAsync<LocalTable>("Select * from Industry");
+                return database.Table<VideoTable>().ToListAsync();
+            }
+            catch { return null; }
+        }
+        public Task<List<VideoTable>> GetVideoTablesAsync(string code)
+        {
+            try
+            {
+                return database.Table<VideoTable>().Where(i => i.IndustryCode == code).ToListAsync();
+            }
+            catch { return null; }
+        }
         public Task<SettingTable> GetSettingsAsync()
         {
             //return database.Table<SettingTable>();
@@ -91,6 +108,17 @@ namespace BelzonaMobile
             }
         }
         public Task<int> SaveIndustryAsync(IndustryTable item)
+        {
+            if (item.ID != 0)
+            {
+                return database.UpdateAsync(item);
+            }
+            else
+            {
+                return database.InsertAsync(item);
+            }
+        }
+        public Task<int> SaveVideoAsync(VideoTable item)
         {
             if (item.ID != 0)
             {

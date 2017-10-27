@@ -81,6 +81,9 @@
     <EmbeddedResource Include="Views\IndustryListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\VideoListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MyListViewPage.xaml.cs">
@@ -164,6 +167,9 @@
     </Compile>
     <Compile Include="Views\IndustryListPage.xaml.cs">
       <DependentUpon>IndustryListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VideoListPage.xaml.cs">
+      <DependentUpon>VideoListPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

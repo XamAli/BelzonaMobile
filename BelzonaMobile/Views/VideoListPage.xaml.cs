@@ -10,14 +10,16 @@ using System.Text.RegularExpressions;
 //Product List Page datasource = ProductViewModel --> ProductHelper -->BelzonaMobile.Data.app-manifest-products-us.json
 namespace BelzonaMobile.Views
 {
-    public partial class IndustryListPage : ContentPage
+    public partial class VideoListPage : ContentPage
     {
-        //public ObservableCollection<IndustryTable> IndustryTable { get; set; }
+        //public ObservableCollection<VideoTable> VideoTable { get; set; }
         public string PageTitle { get; set; }
-        public IndustryListPage(string pTitle)
+        public string Code { get; set; }
+        public VideoListPage(string pTitle, string code = "")
         {
             InitializeComponent();
             PageTitle = pTitle;
+            Code = code;
             // BindingContext = new ProductListLocalDbViewModel();
         }
 
@@ -34,7 +36,7 @@ namespace BelzonaMobile.Views
 
         void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = ((ListView)sender).SelectedItem as IndustryTable;
+            var item = ((ListView)sender).SelectedItem as ProductTable;
 
             //if (item == null)
             //return;
@@ -42,7 +44,7 @@ namespace BelzonaMobile.Views
             //DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
             if (item != null)
             {
-                var newPage = new VideoListPage("VideoPage", item.Code);
+                var newPage = new DetailsPage(item.Code);
                 Navigation.PushAsync(newPage);
             }
             else { return; }
@@ -51,20 +53,23 @@ namespace BelzonaMobile.Views
         protected override async void OnAppearing()
         {
             //((App)App.Current).ResumeAtTodoId = -1;
-
-            List<IndustryTable> results = await App.LocalDatabase.GetIndustryTablesAsync();
+            List<VideoTable> results = new List<VideoTable>();
+            if (Code != "") 
+                results = await App.LocalDatabase.GetVideoTablesAsync(Code);
+            else 
+                results = await App.LocalDatabase.GetVideoTablesAsync();
 
             //ObservableCollection<Grouping<string, ProductTable>> Group = SortAndGroup(results);
-            ObservableCollection<IndustryTable> objProd = new ObservableCollection<IndustryTable>();
- 
-            int cntr = 0;
-            foreach (IndustryTable p in results)
+            ObservableCollection<VideoTable> objProd = new ObservableCollection<VideoTable>();
+
+            //int cntr = 0;
+            foreach (VideoTable p in results)
             {
-                p.Title = (p.Title.Length > 30) ? String.Format("{0}...", p.Title.Substring(0, 28)) : p.Title;
-                p.ProductImage = (cntr % 2 == 0) ? p.ProductImage : "thumb_1111.png";
-                p.Opacity = (p.Favourite == 1) ? 1 : .25;
+                //p.Title = (p.Title.Length > 30) ? String.Format("{0}...", p.Title.Substring(0, 28)) : p.Title;
+                p.ProductImage = "thumb_1111.png";
+                //p.Opacity = (p.Favourite == 1) ? 1 : .25;
                 objProd.Add((p));
-                cntr++;
+                //cntr++;
             }
             //var sorted = from item in objProd
             //             orderby item.GroupName
@@ -91,5 +96,3 @@ namespace BelzonaMobile.Views
         }
     }
 }
-
-
